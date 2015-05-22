@@ -65,7 +65,7 @@ int main(int argc, char **argv) {
 	int numParticles;
 	inputFile >> numParticles;
 
-	cout << "Pulling " << numParticles << " particles from " << argv[1] << endl;
+	cout << "STRUCT," << numParticles << endl;
 
 
 	/*
@@ -85,17 +85,14 @@ int main(int argc, char **argv) {
 	}
 
 	inputFile.close();
-	printf ("File closed...\n");
 
 	// the forces function will return a pointer to an array of three doubles
 	double *forces;
 
 	float sum = 0.0;
 
-	printf ("Running experiment for 35 epochs.\n");
 	for (int epoch = 0; epoch < 35; epoch++) {
 		clock_t t;
-		int f;
 		t = clock();  // we're going to count the clock ticks
 
 		// this loop calls the forces function for each permutation of particle pairs
@@ -113,8 +110,8 @@ int main(int argc, char **argv) {
 		}
 
 		t = clock() - t;
-		cout << "Epoch " << epoch << " took " << t 
-			 << " clicks ( " << (((float) t)/CLOCKS_PER_SEC) << " seconds)" << endl;
+		cout << epoch << "," << t 
+			 << "," << (((float) t)/CLOCKS_PER_SEC) << endl;
 		sum += ((float) t)/CLOCKS_PER_SEC;
 	}
 

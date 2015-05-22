@@ -7,10 +7,12 @@ CC = g++
 CFLAGS  = -g -Wall
 
 # the build target executable:
-all: myprog.c
-  $(CC) -g -Wall -o generateRandomParticles generate.cpp
-  $(CC) -g -Wall -o speedtest_struct speedtest_struct.cpp
-  $(CC) -g -Wall -o speedtest_array speedtest_array.cpp
+all:
+	$(CC) -std=gnu++11 -g -Wall -o generate generateRandomParticles.cpp
+	$(CC) -g -Wall -o speedtest_struct speedtest_struct.cpp
+	$(CC) -g -Wall -o speedtest_array speedtest_array.cpp
 
 clean:
-  $(RM) myprog
+	rm generate
+	rm speedtest_array
+	rm speedtest_struct
