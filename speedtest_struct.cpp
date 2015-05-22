@@ -2,7 +2,7 @@
  * This program was developed as part of an experiment to test the speed of 
  * accessing data stored in a set of arrays vs stored in an array of structures.  
  * 
- * The files in this experiement consist of:
+ * The files in this experiment consist of:
  *   speedtest_struct.cpp 		 - runs the test using an array of structures
  *   speedtest_array.cpp  		 - runs the test using a set of arrays
  *   generateRandomParticles.cpp - generates random test data
