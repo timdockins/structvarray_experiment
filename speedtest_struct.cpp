@@ -65,7 +65,7 @@ int main(int argc, char **argv) {
 	int numParticles;
 	inputFile >> numParticles;
 
-	cout << "STRUCT," << numParticles << endl;
+	cout << numParticles << endl;
 
 
 	/*
@@ -110,8 +110,7 @@ int main(int argc, char **argv) {
 		}
 
 		t = clock() - t;
-		cout << epoch << "," << t 
-			 << "," << (((float) t)/CLOCKS_PER_SEC) << endl;
+		cout << t << endl;
 		sum += ((float) t)/CLOCKS_PER_SEC;
 	}
 

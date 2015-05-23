@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
 	int numParticles;
 	inputFile >> numParticles;
 	
-	cout << "ARRAY," << numParticles << endl;
+	cout << numParticles << endl;
 
 	double mass[numParticles];
 	double radius[numParticles];
@@ -119,8 +119,7 @@ int main(int argc, char **argv) {
 		}
 
 		t = clock() - t;
-		cout << epoch << "," << t 
-			 << "," << (((float) t)/CLOCKS_PER_SEC) << endl;
+		cout << t << endl;
 		sum += ((float) t)/CLOCKS_PER_SEC;
 	}
 
